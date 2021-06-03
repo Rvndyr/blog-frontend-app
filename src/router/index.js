@@ -4,6 +4,8 @@ import Home from "../views/Home.vue";
 import Data from "../views/Data.vue";
 import Signup from "../views/Signup.vue";
 import Login from "../views/Login.vue";
+import Logout from "../views/Logout.vue";
+import PostsIndex from "../views/PostsIndex.vue";
 
 Vue.use(VueRouter);
 
@@ -28,6 +30,8 @@ const routes = [
   },
   { path: "/signup", name: "signup", component: Signup },
   { path: "/login", name: "login", component: Login },
+  { path: "/logout", name: "logout", component: Logout },
+  { path: "/Posts", name: "Posts-Index", component: PostsIndex },
 ];
 
 const router = new VueRouter({
