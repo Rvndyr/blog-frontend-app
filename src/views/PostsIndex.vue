@@ -1,6 +1,10 @@
 <template>
   <div class="PostsIndex">
-    <div v-for="post in posts" v-bind:key="post.id">{{ posts }}</div>
+    <div v-for="post in posts" v-bind:key="post.id">
+      <h2>{{ post.title }}</h2>
+      <h4>{{ post.body }}</h4>
+      <a v-bind:href="`/posts/${post.id}`">more info</a>
+    </div>
   </div>
 </template>
 
