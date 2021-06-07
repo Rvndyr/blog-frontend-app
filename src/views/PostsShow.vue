@@ -1,6 +1,12 @@
 <template>
   <div class="showPosts">
     <div>{{ posts }}</div>
+    <div>
+      <a v-bind:href="`/posts/${posts.id}/edit`">Edit</a>
+    </div>
+    <div>
+      <a href="/posts">Back to all posts</a>
+    </div>
   </div>
 </template>
 
