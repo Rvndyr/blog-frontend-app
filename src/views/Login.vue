@@ -1,21 +1,22 @@
 <template>
-  <div class="login">
-    <form v-on:submit.prevent="submit()">
+  <form v-on:submit.prevent="submit()">
+    <div class="container form-group">
       <h1>Login</h1>
       <ul>
         <li v-for="error in errors" v-bind:key="error">{{ error }}</li>
       </ul>
       <div>
         <label>Email:</label>
-        <input type="email" v-model="email" />
+        <input type="email" class="form-control" v-model="email" />
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
       </div>
       <div>
         <label>Password:</label>
-        <input type="password" v-model="password" />
+        <input type="password" class="form-control" v-model="password" />
       </div>
-      <input type="submit" value="Submit" />
-    </form>
-  </div>
+      <input type="submit" class="btn btn-primary" value="Submit" />
+    </div>
+  </form>
 </template>
 
 <script>
