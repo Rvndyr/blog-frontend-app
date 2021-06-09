@@ -1,5 +1,6 @@
 <template>
   <div class="signup">
+    <img v-if="status" v-bind:src="`https://http.cat/${status}`" alt="" />
     <form v-on:submit.prevent="submit()">
       <h1>Signup</h1>
       <ul>
@@ -37,6 +38,7 @@ export default {
       password: "",
       passwordConfirmation: "",
       errors: [],
+      status: null,
     };
   },
   methods: {
@@ -55,6 +57,7 @@ export default {
         })
         .catch((error) => {
           this.errors = error.response.data.errors;
+          this.status = error.response.status;
         });
     },
   },
