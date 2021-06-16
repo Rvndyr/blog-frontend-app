@@ -23,7 +23,7 @@ export default {
   },
   methods: {
     indexPosts: function () {
-      axios.get("http://localhost:3000/posts").then((response) => {
+      axios.get("/posts").then((response) => {
         console.log("Index Posts", response.data);
         this.posts = response.data;
       });
